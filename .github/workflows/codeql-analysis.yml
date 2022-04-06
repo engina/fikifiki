@@ -46,7 +46,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
     - run: |
-        cd fikifki/Release
+        cd fikifiki/Release
         make
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
