@@ -15,12 +15,12 @@ name: Codacy Security Scan
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron: '43 9 * * 6'
+    - cron: "43 9 * * 6"
 
 permissions:
   contents: read
@@ -52,9 +52,6 @@ jobs:
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
-      - name: C++ code check using clang/cppcheck/flawfinder
-        uses: Tlazypanda/cpp-clang-check@0.13
-
       # Upload the SARIF file generated in the previous step
       - name: Upload SARIF results file
         uses: github/codeql-action/upload-sarif@v2
