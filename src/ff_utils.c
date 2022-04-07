@@ -26,7 +26,7 @@ void ff_util_print_board(struct FF_Board *board)
 			{
 				if (!(j % (board->Size + 1)))
 				{
-					printf("�");
+					printf("+");
 				}
 				else
 					printf("-");
